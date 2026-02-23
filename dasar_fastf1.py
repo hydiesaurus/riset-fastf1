@@ -1,8 +1,10 @@
+import os
 import fastf1
 import pandas as pd
 
 print(f"FastF1 version: {fastf1.__version__}")
 
+os.makedirs('./cache', exist_ok=True)
 fastf1.Cache.enable_cache('./cache')
 print("✅ Cache aktif di folder './cache'\n")
 
